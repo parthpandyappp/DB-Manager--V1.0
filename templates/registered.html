@@ -2,13 +2,16 @@
 <html lang=en>
     <head>
         <title>Registered folks!</title>
+        <link rel="static/shortcut icon" href="static/images/favicon.ico" type="image/x-icon"/>
     </head>
-    <body>
-        <h1><center>Welcome! Below is the list of your colleagues who have registered : </center></h1>
+    <body style="background:white url(//www.html.am/images/backgrounds/background-image-2.gif);">
+        <marquee style="font-family:monospace; font-size: 20px;"><br>You can view the below data into a choice of your database-viewer (Libre-office, excel-sheets, Google spreadsheets etc.)</marquee>
+        <p style="font-family:'Courier New', Courier, monospace; font-size: 35px; text-align: center;">Welcome to the portal,<br> Below is the list of all your registered colleagues!</p>
         <ul>
             {% for student in students %}
-                <li>{{student}}</li>
+                <li style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 20px;">{{student}}</li>
             {% endfor %}
         </ul>
+       
     </body>
 </html>
