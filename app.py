@@ -18,11 +18,11 @@ def registered():
 @app.route("/register" , methods = ["POST"])
 def register():
 
-    if not request.form.get("name") or not request.form.get("Course"):
+    if not request.form.get("name") or not request.form.get("Course") or not request.form.get("email"):
         return "failure"
 
     with open("registered.csv", "a") as file :
         writer = csv.writer(file)
-        writer.writerow((request.form.get("name"), request.form.get("Course")))
+        writer.writerow((request.form.get("name"), request.form.get("email"), request.form.get("Course")))
     return redirect("/registered")
 
