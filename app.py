@@ -2,6 +2,7 @@ from flask import Flask, request, render_template, redirect
 import csv
 app = Flask(__name__)
 students = []
+id =0;
 
 @app.route("/")
 def index():

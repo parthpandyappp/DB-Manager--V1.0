@@ -7,11 +7,54 @@
     <body style="background:white url(//www.html.am/images/backgrounds/background-image-2.gif);">
         <marquee style="font-family:monospace; font-size: 20px;"><br>You can view the below data into a choice of your database-viewer (Libre-office, excel-sheets, Google spreadsheets etc.)</marquee>
         <p style="font-family:'Courier New', Courier, monospace; font-size: 35px; text-align: center;">Welcome to the portal,<br> Below is the list of all your registered colleagues!</p>
-        <ul>
-            {% for student in students %}
-                <li style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 20px;">{{student}}</li>
-            {% endfor %}
-        </ul>
-       
+	<table border=1 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 20px;">
+	<thead>
+	<tr>
+		<th>Id</th>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Course</th>
+	</tr>
+        </thead>
+
+	<tbody>
+		 {% for i in students %}
+			<tr>
+				<td class="counterCell"></td>
+				<td>{{i[0]}}</td>
+				<td>{{i[1]}}</td>
+				<td>{{i[2]}}</td>
+			</tr>
+		 {% endfor %}
+	</tbody>
+	</table>
     </body>
+	<style>
+	body {
+	  /* Set "my-sec-counter" to 0 */
+	  counter-reset: my-sec-counter;
+	}
+
+	.counterCell:before {
+	  /* Increment "my-sec-counter" by 1 */
+	  counter-increment: my-sec-counter;
+	  content: " " counter(my-sec-counter) ". ";
+	}
+	table {
+	  font-family: arial, sans-serif;
+	  border-collapse: collapse;
+	  width: 100%;
+	}
+
+	td, th {
+	  border: 1px solid #dddddd;
+	  text-align: left;
+	  padding: 8px;
+	}
+
+	tr:nth-child(even) {
+	  background-color: #dddddd;
+	}
+	</style>
+	
 </html>
