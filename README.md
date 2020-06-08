@@ -1,4 +1,4 @@
-# Database-Storage-Illusion-v-1.0
+# DB-Manager--V1.0
 This is a python-script made with framework flask :heartpulse: , which performs actions on form inputs received from user and stores it in a ```CSV```file (Comma Separated File), and also reads and retrieve data to display it in html file. All these stuff enables it as a real-time database illusion. It looks like as if we have a real storage of our data somewhere in a real database. To conclude and have an exact User-Interface for data-base we can view the data of csv file in excel sheets, Libre-Office or Google spreadheets etc.
 
 ### More on Flask :diamond_shape_with_a_dot_inside:
