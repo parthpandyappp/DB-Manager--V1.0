@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template, redirect
 import csv
+import os
 app = Flask(__name__)
 students = []
 id =0;
@@ -27,3 +28,6 @@ def register():
         writer.writerow((request.form.get("name"), request.form.get("email"), request.form.get("Course")))
     return redirect("/registered")
 
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port, debug="True")
